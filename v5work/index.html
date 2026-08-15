@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17151b">
+<meta name="description" content="O nosso cantinho — um lugar de calma, carinho e memórias para a Lara.">
+<title>O nosso cantinho · Lara ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><div id="starfield"></div><div class="aurora aurora-a"></div><div class="aurora aurora-b"></div><div class="grain"></div></div>
+<div id="opening" class="opening" aria-modal="true" role="dialog">
+  <div class="opening-stars">✦ · ✧ · ✦ · ✧ · ✦</div>
+  <div class="opening-inner">
+    <span class="opening-kicker">uma coisa que fiz para ti</span>
+    <div class="opening-ring"><span>♡</span></div>
+    <h1>Antes de entrares,<br><em>respira.</em></h1>
+    <p>O mundo pode esperar uns minutos.</p>
+    <p class="opening-small">Este lugar foi feito para os dias em que tudo parece demasiado, mas também para os dias em que só te apetece ficar perto de mim.</p>
+    <button id="enterBtn" class="primary primary-large">Entrar no nosso cantinho <span>→</span></button>
+    <small>feito pelo teu Afonso · para a minha Lara ❤️</small>
+  </div>
+</div>
+<header class="topbar">
+  <button class="brand" data-go="home" aria-label="Voltar ao início"><span>♡</span><b>o nosso cantinho</b></button>
+  <div class="top-progress"><i id="progressBar"></i></div>
+  <div class="actions"><button id="soundBtn" class="round" aria-label="Som ambiente" aria-pressed="false">♪</button><button id="nightBtn" class="round" aria-label="Modo noite" aria-pressed="false">☾</button></div>
+</header>
+<main>
+<section id="home" class="screen active">
+  <div class="hero">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">um lugar feito só para ti</div>
+      <h1>Olá, <em>meu amor.</em><span class="heart-beat">♡</span></h1>
+      <p class="hero-lead">Se hoje estiver difícil, não precisas de carregar tudo sozinha.</p>
+      <p class="hero-sub">Entra. Respira. Fica um bocadinho.<br>Este cantinho é teu — e eu estou aqui contigo. ❤️</p>
+      <div class="hero-actions"><button class="primary" data-go="safe">Preciso de ti <span>→</span></button><button class="ghost" data-go="explore">Quero descobrir</button></div>
+      <div class="tiny-note">feito com amor pelo teu Afonso · para os dias bons e para os dias difíceis</div>
+    </div>
+    <div class="hero-scene reveal delay-1" id="heroScene">
+      <div class="halo"></div><div class="moon">☾</div>
+      <div class="floating-heart fh1">♡</div><div class="floating-heart fh2">✦</div><div class="floating-heart fh3">♡</div>
+      <div class="portrait"><img src="img/fotofav.jpeg" alt="Uma memória nossa"><div class="photo-glow"></div></div>
+      <div class="polaroid"><span>uma das minhas favoritas</span><b>nós. sempre nós.</b></div>
+      <div class="scene-caption">fica mais um bocadinho <span>✦</span></div>
+    </div>
+  </div>
+  <div class="emergency-strip reveal"><div><span class="pulse-dot"></span><div><b>Se estiveres a ter um momento difícil</b><small>não precisas de procurar. Eu deixei um caminho para ti.</small></div></div><button data-go="safe">🫂 Fica comigo</button></div>
+  <div class="home-lower">
+    <div class="welcome-card glass"><div class="mini-icon">☁</div><div><b>Não precisas de ter uma razão.</b><span>Podes vir aqui só porque precisas de um lugar tranquilo.</span></div></div>
+    <div class="home-nav" id="homeNav"></div>
+  </div>
+</section>
+
+<section id="safe" class="screen">
+  <div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">primeiro: tu</div><h2>Fica comigo.</h2></div></div>
+  <div class="safe-hero glass"><div class="safe-orbit"><span>♡</span></div><div class="safe-copy"><span class="pill">sem pressa · sem julgamentos</span><p class="safe-big">Não precisas de resolver nada agora.</p><p>Vamos só fazer o próximo minuto.</p><div class="safe-actions"><button class="primary" data-go="breathing">🌬️ Respirar comigo</button><button class="secondary" data-safe="hug">🫂 Quero o teu abraço</button><button class="secondary" data-safe="words">💌 Quero ouvir-te</button></div></div></div>
+  <div class="safe-cards"><button data-safe="ground"><span>🌿</span><b>Voltar ao agora</b><small>um exercício simples para pousar a cabeça</small></button><button data-safe="promise"><span>🤍</span><b>Uma promessa</b><small>uma coisa que quero que nunca esqueças</small></button><button data-safe="night"><span>🌙</span><b>Ficar em silêncio</b><small>não precisas de falar para eu ficar contigo</small></button><button data-safe="letter"><span>💌</span><b>Uma carta rápida</b><small>palavras minhas só para este momento</small></button></div>
+</section>
+
+<section id="breathing" class="screen breathing-screen">
+  <div class="section-head"><button class="back" data-go="safe">←</button><div><div class="eyebrow">um minuto só nosso</div><h2>Respira comigo.</h2></div></div>
+  <div class="breath-layout">
+    <div class="breath-stage glass"><div class="breath-orbit o1"></div><div class="breath-orbit o2"></div><div id="breathOrb" class="breath-orb"><div><strong id="breathWord">fica aqui</strong><span id="breathTime">comigo</span></div></div><p id="breathLine">Não precisamos de resolver nada agora.</p><button id="breathStart" class="primary">Começar devagar</button><div class="breath-dots" id="breathDots"></div></div>
+    <aside class="breath-side"><span class="pill">para quando a cabeça estiver cheia</span><h3>Não tens de fazer isto perfeitamente.</h3><p>Se perderes o ritmo, tudo bem. Volta apenas ao círculo e acompanha o movimento.</p><div class="breath-rule"><span>01</span> inspira sem pressa</div><div class="breath-rule"><span>02</span> deixa o ar sair</div><div class="breath-rule"><span>03</span> fica mais um pouco</div></aside>
+  </div>
+</section>
+
+<section id="letters" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">abre quando precisares</div><h2>Cartas para ti.</h2></div></div><p class="intro">Palavras minhas guardadas para os momentos em que talvez precises mais delas.</p><div class="letters-grid" id="lettersGrid"></div></section>
+<section id="story" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">o primeiro capítulo não foi o último</div><h2>A nossa história.</h2></div></div><div class="story-progress"><span>o nosso caminho</span><i><b id="storyProgress"></b></i></div><div class="story-line" id="storyLine"></div></section>
+
+<section id="memories" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">para guardar</div><h2>Pequenos momentos.</h2></div></div><div class="memory-stage glass"><div class="memory-photo-wrap"><div class="memory-photo"><img id="memoryImage" src="foto-dia-dos-namorados.jpeg" alt="Memória nossa"></div><div class="memory-number" id="memoryNumber">01 / 04</div></div><div class="memory-text"><span class="pill" id="memoryPill">14 · 02 · nós</span><h3 id="memoryTitle">Uma fotografia. Uma quantidade absurda de sentimentos.</h3><p id="memoryP1">Às vezes uma fotografia parece só uma fotografia. Mas esta faz-me lembrar como é bom poder olhar para o lado e encontrar-te.</p><p id="memoryP2">Quero encher a nossa história de momentos assim. Uns grandes, outros completamente simples. Desde que sejam contigo.</p><div class="memory-controls"><button class="secondary" id="memoryPrev">←</button><button class="secondary" id="memorySave">Guardar esta memória ✦</button><button class="secondary" id="memoryNext">→</button></div></div></div></section>
+
+<section id="room" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">entra sem bater</div><h2>A nossa sala.</h2></div></div><p class="intro">Mexe nas coisas. Há pequenas surpresas escondidas — e algumas só aparecem depois de explorares.</p><div class="room glass" id="room"><div class="room-window"><div class="night-sky">✦　·　☾　·　✧　·　✦</div><span></span></div><div class="lamp"><button data-room="lamp">◉</button></div><div class="frame"><button data-room="frame"><img src="foto-dia-dos-namorados.jpeg" alt="Nós"></button></div><div class="sofa"><button data-room="sofa">▰</button><span>♡</span></div><div class="tv"><button data-room="tv">▣</button><div>Ressaca<br><small>Vestida para Casar · Diário de uma Paixão</small></div></div><div class="table"><button data-room="letter">💌</button><button data-room="secret">🔐</button></div><div class="plant"><button data-room="plant">🌿</button></div><div class="bear"><button data-room="bear">🧸</button></div><div class="room-hint">clica para explorar <span>✦</span></div></div></section>
+
+<section id="secrets" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">há coisas que só descobres ficando</div><h2>Pequenos segredos.</h2></div></div><div class="secret-intro"><span>🔐</span><p>Nem tudo precisa de estar à vista. Explora com calma.</p></div><div class="secrets-grid" id="secretsGrid"></div></section>
+
+<section id="garden" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">cresce connosco</div><h2>O jardim.</h2></div></div><div class="garden"><div class="garden-scene"><div class="garden-sky">✦　✧　·　✦　·　☾　·　✧</div><div class="fireflies" id="fireflies"></div><div id="gardenTree">🌱</div><div id="gardenFlowers"></div><div class="garden-ground"></div></div><div class="garden-info glass"><div class="garden-count"><b id="starCount">0</b><span>estrelas guardadas</span></div><div class="bar"><i id="bar"></i></div><p>Cada estrela aparece quando descobres, lês, respiras ou vives um bocadinho deste lugar.</p><div class="next-reward" id="nextReward"></div><div id="rewards"></div></div></div></section>
+
+<section id="explore" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">o nosso pequeno universo</div><h2>Explora devagar.</h2></div></div><div class="explore-grid"><button class="explore-card big" data-go="letters"><span>💌</span><b>Cartas</b><small>palavras para os dias em que precisares de mim</small></button><button class="explore-card" data-go="story"><span>📖</span><b>A nossa história</b><small>capítulos que já escrevemos</small></button><button class="explore-card" data-go="memories"><span>📸</span><b>Memórias</b><small>coisas que quero guardar</small></button><button class="explore-card" data-go="room"><span>🏠</span><b>A nossa sala</b><small>entra e procura</small></button><button class="explore-card" data-go="secrets"><span>🔐</span><b>Segredos</b><small>alguns ainda estão escondidos</small></button><button class="explore-card" data-go="garden"><span>⭐</span><b>O jardim</b><small>vê o que já crescemos juntos</small></button><button class="explore-card" data-go="future"><span>💍</span><b>O futuro</b><small>aquilo que ainda quero viver contigo</small></button><button class="explore-card" data-go="constellation"><span>🌌</span><b>Constelação</b><small>estrelas com histórias dentro</small></button></div></section>
+
+<section id="constellation" class="screen"><div class="section-head"><button class="back" data-go="explore">←</button><div><div class="eyebrow">cada estrela guarda uma coisa</div><h2>A nossa constelação.</h2></div></div><div class="constellation-wrap glass"><div class="constellation-map" id="constellationMap"><div class="constellation-lines"></div></div><div class="constellation-note" id="constellationNote">Escolhe uma estrela. Algumas palavras ficam à tua espera. ✦</div></div></section>
+
+<section id="future" class="screen"><div class="section-head"><button class="back" data-go="home">←</button><div><div class="eyebrow">um dia, daqui a muitos capítulos</div><h2>O que ainda quero viver.</h2></div></div><div class="future"><div class="future-letter glass"><span class="pill">💍 para a mulher que amo</span><h3>Quero descobrir tudo isto contigo.</h3><p>Quero casar contigo. Um dia quero levar-te para um lugar bem longe, bonito e tranquilo, e pedir-te em casamento da maneira que imagino.</p><p>Quero a nossa casinha, as nossas viagens, as nossas aventuras e aqueles dias simples que acabam por ser os mais importantes.</p><p>E imagino-nos a construir uma família linda. Uma menina e um menino. ❤️</p><p>E no meio de tudo isso, quero continuar a ser o teu polícia favorito.</p><p class="signature">Ainda temos tantos capítulos para escrever.<br><strong>Eu quero vivê-los contigo.</strong> ❤️</p></div><div class="future-orbit"><div class="orbit-heart">❤️</div><span>nós</span><i>✦</i><i>✧</i><i>·</i></div></div></section>
+
+<section id="finale" class="screen finale-screen"><div class="finale-card glass"><div class="finale-sparkles">✦　✧　·　✦　·　✧　✦</div><span class="pill">se chegaste até aqui…</span><h2>Tenho uma última coisa para te dizer.</h2><div class="finale-letter"><p>Meu amor,</p><p>fiz este lugar porque, às vezes, gostava de conseguir estar contigo em todos os momentos. Nos dias bons, nos dias difíceis, quando ris, quando tens medo, quando só queres silêncio.</p><p>Não consigo estar fisicamente em todo o lado. Mas posso deixar um bocadinho de mim aqui.</p><p>Quando precisares, volta. Abre uma carta. Respira comigo. Olha para uma fotografia. Ou simplesmente fica.</p><p class="finale-big">Eu escolho-te.<br>Hoje, amanhã e em todos os capítulos que ainda faltam. ❤️</p><p class="signature">— Afonso</p></div><button id="finaleBtn" class="primary primary-large">Guardar este momento ✦</button></div></section>
+</main>
+<div id="modal" class="modal" aria-hidden="true"><div class="modal-card"><button id="modalClose" class="modal-close" aria-label="Fechar">×</button><div id="modalIcon" class="modal-icon">❤️</div><h3 id="modalTitle"></h3><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div>
+<footer><span>feito com amor por Afonso</span><span>♡</span></footer>
+<script src="script.js"></script>
+
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
